@@ -274,6 +274,23 @@ nav a.cta:hover{background:linear-gradient(180deg,#4A2480,#2C1450);color:#fff}
 .royal-card .ros-foot .bar{background:#C9A44C}
 .royal-card .lg-tint{background:linear-gradient(140deg,rgba(255,255,255,.30) 0%,rgba(255,255,255,.08) 50%,rgba(232,207,134,.22) 100%)!important}
 #programme > .sub{color:#5B574C}
+
+/* ---- single programme card: white-gold service, purple-white-gold reception ---- */
+#programme::before{background:linear-gradient(180deg,#FFFFFF 0%,#FDF7E8 30%,#F6EBD0 50%,#EFE4F5 72%,#E2D2EE 100%)!important}
+.ros-rec{margin:0 -22px -8px;padding:28px 22px 18px;border-radius:4px;background:
+radial-gradient(70% 50% at 50% 0%,rgba(255,255,255,.9),rgba(255,255,255,0) 70%),
+linear-gradient(170deg,#FFFFFF 0%,#F5EEF9 30%,#ECE0F4 58%,#F4E8CC 100%);border:1px solid rgba(201,164,76,.55);box-shadow:inset 0 0 0 4px rgba(255,255,255,.6)}
+.ros-rec .ros-part h3{color:#5B2A86}
+.ros-rec .ros-part .when{color:#2C1254}
+.ros-rec .ros li time{color:#5B2A86}
+.ros-rec .ros li i::before,.ros-rec li i::before{border-color:#7A47A6;background:#FBF7FD}
+.ros-rec li time{color:#5B2A86}
+.ros-rec li:not(:last-child) i::after{background:rgba(122,71,166,.4)}
+.ros-rec li b{color:#24123F}
+.ros-rec .ros-foot{border-top-color:#B08D3C}
+.ros-rec .ros-foot .lbl{color:#5B2A86}
+.ros-svc ol{margin-top:20px}
+@media (max-width:620px){.ros-rec{margin:0 -8px -4px;padding:22px 10px 14px}}
 </style>
 <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -602,7 +619,8 @@ nav a.cta:hover{background:linear-gradient(180deg,#4A2480,#2C1450);color:#fff}
 <h2>Order of the Day</h2>
 <p class="sub">A service of thanksgiving in the afternoon, then an evening reception.</p>
 <div class="panel glass"><span class="lg-bend" aria-hidden="true"></span><span class="lg-tint" aria-hidden="true"></span><span class="lg-shine" aria-hidden="true"></span>
-<div class="lg-content"><div class="inv"><div class="inv-in ros ros-svc">
+<div class="lg-content"><div class="inv"><div class="inv-in ros">
+<div class="ros-svc">
 <div class="ros-part"><h3>Thanksgiving Service</h3><p class="when">2:00pm – 3:30pm</p><p class="where">Christ Church (Anglican), University of Ghana, Legon</p></div>
 <ol>
 <li><time>2:00pm</time><i aria-hidden="true"></i><div><b>Processional and welcome</b><span>The celebrant, family and clergy enter; the congregation is welcomed.</span></div></li>
@@ -616,10 +634,9 @@ nav a.cta:hover{background:linear-gradient(180deg,#4A2480,#2C1450);color:#fff}
 <li><time>3:30pm</time><i aria-hidden="true"></i><div><b>Recessional</b><span>Guests make their way to IDEG House for the evening reception.</span></div></li>
 </ol>
 <p class="ros-note">Service order and times are approximate.</p>
-</div></div></div>
 </div>
-<div class="panel glass royal-card"><span class="lg-bend" aria-hidden="true"></span><span class="lg-tint" aria-hidden="true"></span><span class="lg-shine" aria-hidden="true"></span>
-<div class="lg-content"><div class="inv"><div class="inv-in ros">
+<div class="ros-div"><span></span></div>
+<div class="ros-rec">
 <div class="ros-part"><h3>Evening Reception</h3><p class="when">4:00pm – 10:00pm</p><p class="where">IDEG House, No. 24 Garden Road, East Legon, Accra</p></div>
 <ol>
 <li><time>4:00pm</time><i aria-hidden="true"></i><div><b>Arrival and welcome drinks</b><span>Guests are welcomed with drinks and music.</span></div></li>
@@ -631,6 +648,7 @@ nav a.cta:hover{background:linear-gradient(180deg,#4A2480,#2C1450);color:#fff}
 <li><time>8:15pm</time><i aria-hidden="true"></i><div><b>Dance and music</b><span>The celebration continues on the dance floor.</span></div></li>
 </ol>
 <div class="ros-foot" id="rsvp"><span class="lbl">R.S.V.P.</span><a href="tel:+233242934830">024 293 4830</a><span class="bar"></span><a href="tel:+233544357751">054 435 7751</a><br><span class="lbl">Dress</span>All White or Traditional</div>
+</div>
 </div></div></div>
 </div>
 <div class="kente bot bleed" aria-hidden="true"></div>
