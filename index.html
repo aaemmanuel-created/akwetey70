@@ -416,6 +416,17 @@ nav .in{justify-content:center!important;overflow:visible}
 .seal{margin-top:14px}
 header .seal .crest{width:40px;margin:0 auto;opacity:.95}
 @media (max-width:600px){.ea70{width:118px}}
+
+/* ---- numbered programme (no item times) ---- */
+.ros ol{counter-reset:step}
+.ros li{counter-increment:step;grid-template-columns:34px 1fr!important;column-gap:14px!important;padding-bottom:16px!important}
+.ros li i{grid-column:1!important;grid-row:1 / span 2!important}
+.ros li > div{grid-column:2!important;grid-row:1!important;align-self:center}
+.ros li i::before{content:counter(step)!important;transform:none!important;left:0!important;top:-1px!important;width:30px!important;height:30px!important;border-radius:50%!important;
+display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",Georgia,serif;font-size:16px;font-weight:700;font-style:normal;color:#8C6A1F;font-variant-numeric:lining-nums;background:#FFFDF7!important;border:1px solid #B08D3C!important}
+.ros li:not(:last-child) i::after{left:15px!important;top:31px!important;bottom:-16px!important}
+.ros li b{line-height:1.3}
+@media (max-width:600px){.ros li{grid-template-columns:30px 1fr!important;column-gap:12px!important}.ros li i::before{width:26px!important;height:26px!important;font-size:14px}.ros li:not(:last-child) i::after{left:13px!important;top:27px!important}}
 </style>
 <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -498,38 +509,37 @@ header .seal .crest{width:40px;margin:0 auto;opacity:.95}
 <div class="ros-svc">
 <div class="ros-part"><h3>Thanksgiving Service</h3><p class="when">2:00pm – 3:30pm</p><p class="where">Christ Church (Anglican), University of Ghana, Legon</p></div>
 <ol>
-<li><time>2:00pm</time><i aria-hidden="true"></i><div><b>Processional and welcome</b></div></li>
-<li><time>2:10pm</time><i aria-hidden="true"></i><div><b>Call to worship and opening prayer</b></div></li>
-<li><time>2:15pm</time><i aria-hidden="true"></i><div><b>Hymns of praise and thanksgiving</b></div></li>
-<li><time>2:30pm</time><i aria-hidden="true"></i><div><b>Scripture readings</b></div></li>
-<li><time>2:40pm</time><i aria-hidden="true"></i><div><b>Sermon</b></div></li>
-<li><time>3:05pm</time><i aria-hidden="true"></i><div><b>Thanksgiving offering</b><span>Dr Akwetey and family lead the thanksgiving.</span></div></li>
-<li><time>3:15pm</time><i aria-hidden="true"></i><div><b>Prayers for Dr Akwetey and family</b></div></li>
-<li><time>3:25pm</time><i aria-hidden="true"></i><div><b>Closing hymn and benediction</b></div></li>
-<li><time>3:30pm</time><i aria-hidden="true"></i><div><b>Recessional</b><span>Guests make their way to IDEG House for the evening reception.</span></div></li>
+<li><i aria-hidden="true"></i><div><b>Processional and welcome</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Call to worship and opening prayer</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Hymns of praise and thanksgiving</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Scripture readings</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Sermon</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Thanksgiving offering</b><span>Dr Akwetey and family lead the thanksgiving.</span></div></li>
+<li><i aria-hidden="true"></i><div><b>Prayers for Dr Akwetey and family</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Closing hymn and benediction</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Recessional</b><span>Guests make their way to IDEG House for the evening reception.</span></div></li>
 </ol>
-<p class="ros-note">Service order and times are approximate.</p>
 </div>
 <div class="ros-div"><span></span></div>
 <div class="ros-rec">
 <div class="ros-part"><h3>Evening Reception</h3><p class="when">4:00pm – 10:00pm</p><p class="where">IDEG House, No. 24 Garden Road, East Legon, Accra</p><p class="where mc">Master of Ceremonies: Ms Jackie Ankrah</p></div>
 <ol>
-<li><time>4:00pm</time><i aria-hidden="true"></i><div><b>Arrival of guests and welcome drinks</b><span>Guests are welcomed with drinks and music.</span></div></li>
-<li><time>5:20pm</time><i aria-hidden="true"></i><div><b>Opening prayer</b></div></li>
-<li><time>5:25pm</time><i aria-hidden="true"></i><div><b>Welcome address</b></div></li>
-<li><time>5:35pm</time><i aria-hidden="true"></i><div><b>Musical interlude</b></div></li>
-<li><time>5:45pm</time><i aria-hidden="true"></i><div><b>Goodwill messages</b></div></li>
-<li><time>6:05pm</time><i aria-hidden="true"></i><div><b>Profile of Dr Akwetey</b><span>His leadership, and IDEG past, present and future.</span></div></li>
-<li><time>6:25pm</time><i aria-hidden="true"></i><div><b>Musical performance</b></div></li>
-<li><time>6:35pm</time><i aria-hidden="true"></i><div><b>Messages from family, friends and IDEG staff</b></div></li>
-<li><time>6:55pm</time><i aria-hidden="true"></i><div><b>Unveiling of the Akwetey Family Crest</b></div></li>
-<li><time>7:05pm</time><i aria-hidden="true"></i><div><b>Musical performance</b></div></li>
-<li><time>7:15pm</time><i aria-hidden="true"></i><div><b>Cake cutting</b></div></li>
-<li><time>7:25pm</time><i aria-hidden="true"></i><div><b>Dinner</b></div></li>
-<li><time>8:15pm</time><i aria-hidden="true"></i><div><b>Toast to Dr Akwetey</b></div></li>
-<li><time>8:25pm</time><i aria-hidden="true"></i><div><b>Response by the celebrant</b></div></li>
-<li><time>8:40pm</time><i aria-hidden="true"></i><div><b>Music and dancing</b></div></li>
-<li><time>9:45pm</time><i aria-hidden="true"></i><div><b>Vote of thanks and closing prayer</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Arrival of guests and welcome drinks</b><span>Guests are welcomed with drinks and music.</span></div></li>
+<li><i aria-hidden="true"></i><div><b>Opening prayer</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Welcome address</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Musical interlude</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Goodwill messages</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Profile of Dr Akwetey</b><span>His leadership, and IDEG past, present and future.</span></div></li>
+<li><i aria-hidden="true"></i><div><b>Musical performance</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Messages from family, friends and IDEG staff</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Unveiling of the Akwetey Family Crest</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Musical performance</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Cake cutting</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Dinner</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Toast to Dr Akwetey</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Response by the celebrant</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Music and dancing</b></div></li>
+<li><i aria-hidden="true"></i><div><b>Vote of thanks and closing prayer</b></div></li>
 </ol>
 <div class="ros-foot" id="rsvp"><span class="lbl">R.S.V.P.</span><a href="tel:+233242934830">024 293 4830</a><span class="bar"></span><a href="tel:+233544357751">054 435 7751</a><br><span class="lbl">Dress</span>All White or Traditional</div>
 </div>
