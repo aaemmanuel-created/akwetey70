@@ -366,6 +366,43 @@ header{padding-top:132px}
 @keyframes twinkle{0%,100%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1)}}
 @media (prefers-reduced-motion:reduce){.sp{animation:none;opacity:.8}}
 @media (max-width:600px){.ch{width:112px}}
+
+/* ---- reel feel: full-screen snapping sheets with spring motion ---- */
+html{scroll-snap-type:y proximity;scroll-padding-top:0}
+header{min-height:100svh;display:flex;flex-direction:column;justify-content:center;scroll-snap-align:start;scroll-snap-stop:always}
+main{position:relative}
+main section{min-height:100svh;display:flex;flex-direction:column;justify-content:center;scroll-snap-align:start;
+  margin-top:-44px;padding-top:140px;padding-bottom:120px;z-index:1;isolation:isolate}
+main section::before{border-radius:44px 44px 0 0;box-shadow:0 -18px 40px rgba(90,70,20,.10),0 -1px 0 rgba(201,164,76,.45)}
+main section > *{width:100%}
+.goldline{display:none}
+footer{position:relative;z-index:2;margin-top:-44px;border-radius:44px 44px 0 0;box-shadow:0 -18px 40px rgba(90,70,20,.10);padding-top:80px}
+/* spring reveal */
+.js .rv{opacity:0;transform:translateY(46px) scale(.96);transition:opacity .7s ease,transform 1.05s cubic-bezier(.34,1.56,.64,1);transition-delay:var(--d,0ms)}
+.js .rv.in{opacity:1;transform:none}
+/* scroll cue */
+.cue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:#8C6A1F;text-decoration:none}
+.cue i{width:22px;height:34px;border:1.5px solid rgba(140,106,31,.7);border-radius:12px;position:relative}
+.cue i::after{content:"";position:absolute;left:50%;top:7px;width:4px;height:7px;margin-left:-2px;border-radius:2px;background:#8C6A1F;animation:cue 1.8s cubic-bezier(.34,1.56,.64,1) infinite}
+@keyframes cue{0%{transform:translateY(0);opacity:1}70%{transform:translateY(12px);opacity:0}100%{opacity:0}}
+/* section dots */
+.dots{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:6;display:flex;flex-direction:column;gap:12px;padding:10px 7px;border-radius:999px;background:rgba(255,253,247,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:inset 0 0 0 1px rgba(201,164,76,.35),0 6px 18px rgba(90,70,20,.12)}
+.dots a{display:block;width:8px;height:8px;border-radius:50%;background:rgba(140,106,31,.35);transition:height .5s cubic-bezier(.34,1.56,.64,1),background .3s}
+.dots a.on{height:24px;border-radius:5px;background:#8C6A1F}
+@media (prefers-reduced-motion:reduce){.js .rv{transform:none;transition:opacity .3s}.cue i::after{animation:none}html{scroll-snap-type:none}}
+@media (max-width:600px){main section{margin-top:-30px;padding-top:96px;padding-bottom:84px}main section::before{border-radius:30px 30px 0 0}footer{margin-top:-30px;border-radius:30px 30px 0 0}.dots{right:6px;gap:9px;padding:8px 5px}.dots a{width:6px;height:6px}.dots a.on{height:18px}.cue{bottom:14px}header{padding-bottom:90px}}
+
+/* ---- centred tab bar on every screen; cleaner phone view ---- */
+nav .bar{max-width:max-content!important;margin:0 auto!important}
+nav .in{justify-content:center!important;overflow:visible}
+@media (max-width:600px){
+  .dots{display:none}
+  nav a{font-size:12.5px;padding:7px 13px}
+  header .glass{margin:0 2px}
+  main section{min-height:auto;padding-top:88px;padding-bottom:76px}
+  main section#crest{min-height:88svh}
+  .cue{display:none}
+}
 </style>
 <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -408,7 +445,9 @@ header{padding-top:132px}
 </div></div>
 </div>
 </div>
+<a class="cue" href="#programme"><i></i>Scroll</a>
 </header>
+<nav class="dots" aria-label="Page sections"></nav>
 <div class="goldline" aria-hidden="true"></div>
 
 <main>
@@ -601,10 +640,21 @@ header{padding-top:132px}
 b.addEventListener('click',function(){var on=u.classList.toggle('unveiled');b.textContent=on?'Cover the crest again':'Unveil the crest';});})();
 </script>
 <script>
-(function(){var els=document.querySelectorAll('main section > *:not(.rays):not(.kente)');
+(function(){
+var sel='main section > *:not(.rays):not(.kente):not(.grid):not(.symgrid), main .grid > *, main .symgrid > *, main .ros li, main .ros-part, main .ros-foot';
+var els=[].slice.call(document.querySelectorAll(sel));
+els.forEach(function(e){var p=e.parentElement,i=[].indexOf.call(p.children,e);e.style.setProperty('--d',Math.min(i,8)*70+'ms')});
 if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
-els.forEach(function(e){e.classList.add('rv');io.observe(e)})})();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+els.forEach(function(e){e.classList.add('rv');io.observe(e)});
+/* section dots */
+var dots=document.querySelector('.dots'),secs=[document.querySelector('header')].concat([].slice.call(document.querySelectorAll('main section')));
+var names={programme:'Order of the Day',theme:'Theme',crest:'Our Crest',directions:'Directions',symbols:'Ga Symbols'};
+secs.forEach(function(sc,i){if(!sc.id&&i===0)sc.id='top';var a=document.createElement('a');a.href='#'+sc.id;a.setAttribute('aria-label',i===0?'Invitation':(names[sc.id]||sc.id));dots.appendChild(a)});
+var ds=[].slice.call(dots.children);
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var i=secs.indexOf(e.target);ds.forEach(function(d,j){d.classList.toggle('on',j===i)})}})},{threshold:0,rootMargin:'-45% 0px -50% 0px'});
+secs.forEach(function(sc){so.observe(sc)});
+})();
 </script>
 <script>
 (function(){var nav=document.querySelector('nav .in'),lens=nav&&nav.querySelector('.lens');if(!lens)return;
