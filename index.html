@@ -67,6 +67,18 @@ header .crest{width:64px;height:auto;display:block;margin:0 auto 2px}
 .cel-detail a{display:block;font-weight:500;font-size:16px;letter-spacing:.06em;color:var(--ink);text-decoration:none;padding:2px 0}
 .cel-dress{margin:28px auto 0;text-align:center;font-size:15px;color:var(--ink)}
 .cel-dress span{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dk);margin-right:12px}
+.ros{max-width:760px;margin:0 auto;background:#fff;border:1px solid rgba(176,141,60,.55);border-radius:12px;padding:30px 34px;box-shadow:0 10px 30px rgba(122,95,34,.10)}
+.ros h3{margin:0 0 6px;font-size:12.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dk);text-align:center}
+.ros .where{margin:0 0 20px;text-align:center;font-size:14px;color:var(--muted)}
+.ros .where::after{content:"";display:block;width:32px;height:1px;background:var(--gold);margin:14px auto 0}
+.ros ol{list-style:none;margin:0;padding:0;counter-reset:st}
+.ros li{position:relative;padding:0 0 18px 52px;counter-increment:st}
+.ros li::before{content:counter(st);position:absolute;left:0;top:-2px;width:32px;height:32px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",Georgia,serif;font-size:18px;font-weight:600;color:var(--gold-dk);background:#FFFDF7}
+.ros li:not(:last-child)::after{content:"";position:absolute;left:16px;top:32px;bottom:0;width:1px;background:rgba(176,141,60,.45)}
+.ros li b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:21px;font-weight:600;color:var(--ink);line-height:1.2}
+.ros li span{display:block;font-size:14.5px;line-height:1.5;color:var(--muted);margin-top:2px}
+.ros .gap{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:6px 0 26px}
+@media (max-width:620px){.ros{padding:24px 18px}}
 .verse{max-width:680px;margin:0 auto 32px;text-align:center;font-family:"Cormorant Garamond",Georgia,serif;font-size:24px;font-style:italic;line-height:1.4}
 .verse cite{display:block;margin-top:8px;font-style:normal;font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dk)}
 .prose{max-width:720px;margin:0 auto 32px;color:var(--muted);text-align:center}
@@ -127,7 +139,7 @@ footer{text-align:center;padding:40px 20px 56px;background:linear-gradient(180de
 </head>
 <body>
 <nav aria-label="Sections"><div class="in">
-<a href="#theme">Theme</a><a href="#details">Details</a><a href="#symbols">Ga Symbols</a><a href="#crest">Our Crest</a><a href="#menu">Menu</a><a href="#venue">3D venue</a><a href="#directions">Directions</a><a href="#rsvp">R.S.V.P.</a>
+<a href="#theme">Theme</a><a href="#details">Details</a><a href="#programme">Programme</a><a href="#symbols">Ga Symbols</a><a href="#crest">Our Crest</a><a href="#menu">Menu</a><a href="#venue">3D venue</a><a href="#directions">Directions</a><a href="#rsvp">R.S.V.P.</a>
 </div></nav>
 
 <header>
@@ -201,6 +213,27 @@ footer{text-align:center;padding:40px 20px 56px;background:linear-gradient(180de
 </div>
 </div>
 <p class="cel-dress"><span>Dress</span>All White or Traditional</p>
+</section>
+
+<section id="programme">
+<h2>Order of the Day</h2>
+<p class="sub">How the celebration will unfold, from thanksgiving in the afternoon to the evening reception.</p>
+<div class="ros">
+<h3>Thanksgiving Service</h3>
+<p class="where">2:00pm · Christ Church (Anglican), University of Ghana, Legon</p>
+<div style="height:22px"></div>
+<h3>Evening Reception</h3>
+<p class="where">IDEG House, No. 24 Garden Road, East Legon</p>
+<ol>
+<li><b>Arrival and welcome drinks</b><span>Guests are welcomed with drinks and music.</span></li>
+<li><b>Into the auditorium</b><span>Guests are invited into the auditorium for the evening programme.</span></li>
+<li><b>Speeches and tributes</b><span>Words of thanksgiving and tribute to Dr Akwetey.</span></li>
+<li><b>Unveiling of the Akwetey Family Crest</b><span>The new family crest, built on the Ga Asrafoi symbol, is revealed.</span></li>
+<li><b>IDEG: Moving Forward</b><span>A reveal of the next chapter for IDEG.</span></li>
+<li><b>Dinner</b><span>Guests take their seats for dinner.</span></li>
+<li><b>Dance and music</b><span>The celebration continues on the dance floor.</span></li>
+</ol>
+</div>
 </section>
 
 <section id="symbols">
