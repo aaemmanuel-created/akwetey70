@@ -427,6 +427,19 @@ display:flex;align-items:center;justify-content:center;font-family:"Cormorant Ga
 .ros li:not(:last-child) i::after{left:15px!important;top:31px!important;bottom:-16px!important}
 .ros li b{line-height:1.3}
 @media (max-width:600px){.ros li{grid-template-columns:30px 1fr!important;column-gap:12px!important}.ros li i::before{width:26px!important;height:26px!important;font-size:14px}.ros li:not(:last-child) i::after{left:13px!important;top:27px!important}}
+
+/* ---- section titles framed like the Order of the Day card ---- */
+.title-card{max-width:720px;margin:0 auto 44px;background:#FFFFFF;border:1.5px solid #B08D3C;padding:6px;border-radius:3px;
+  box-shadow:0 1px 2px rgba(60,45,10,.05),0 22px 50px -24px rgba(122,95,34,.35)}
+.tc-in{border:1px solid #B08D3C;padding:30px 34px 26px;text-align:center}
+.title-card .eyebrow{margin:0 0 10px;font-family:"Cormorant Garamond",Georgia,serif;font-size:15px;font-weight:700;letter-spacing:.26em;color:#7A5F22;font-variant-numeric:lining-nums}
+.title-card .eyebrow::before,.title-card .eyebrow::after{display:none}
+.title-card h2{margin:0;font-size:clamp(32px,4.4vw,48px);line-height:1.08}
+.tc-orn{display:flex;align-items:center;gap:12px;width:min(260px,70%);margin:16px auto 14px}
+.tc-orn::before,.tc-orn::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,#B08D3C,transparent)}
+.tc-orn i{width:7px;height:7px;transform:rotate(45deg);border:1px solid #B08D3C}
+.title-card .sub{margin:0 auto;max-width:560px;font-size:15px;color:#4A463C}
+@media (max-width:600px){.title-card{margin-bottom:30px}.tc-in{padding:22px 16px 18px}.title-card .eyebrow{font-size:12.5px;letter-spacing:.2em}}
 </style>
 <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -501,9 +514,12 @@ display:flex;align-items:center;justify-content:center;font-family:"Cormorant Ga
 <main>
 <section id="programme">
 <span class="rays" aria-hidden="true"></span>
+<div class="title-card"><div class="tc-in">
 <p class="eyebrow">05 · 12 · 2026</p>
 <h2>Order of the Day</h2>
+<span class="tc-orn" aria-hidden="true"><i></i></span>
 <p class="sub">A service of thanksgiving in the afternoon, then an evening reception.</p>
+</div></div>
 <div class="panel glass"><span class="lg-bend" aria-hidden="true"></span><span class="lg-tint" aria-hidden="true"></span><span class="lg-shine" aria-hidden="true"></span>
 <div class="lg-content"><div class="inv"><div class="inv-in ros">
 <div class="ros-svc">
@@ -548,9 +564,12 @@ display:flex;align-items:center;justify-content:center;font-family:"Cormorant Ga
 </section>
 
 <section id="theme">
+<div class="title-card"><div class="tc-in">
 <p class="eyebrow">Our theme</p>
 <h2>The Glory of the Lord’s House</h2>
+<span class="tc-orn" aria-hidden="true"><i></i></span>
 <p class="sub">Our theme for the celebration</p>
+</div></div>
 <blockquote class="verse">“The glory of this latter house shall be greater than of the former, saith the LORD of hosts: and in this place will I give peace.”<cite>Haggai 2:9</cite></blockquote>
 <blockquote class="verse">“With long life will I satisfy him, and shew him my salvation.”<cite>Psalm 91:16</cite></blockquote>
 <p class="prose">As we give thanks for seventy years, we lift our eyes to the house God is building: a house of many rooms, raised through a people, an institution and a life.</p>
@@ -565,9 +584,12 @@ display:flex;align-items:center;justify-content:center;font-family:"Cormorant Ga
 
 
 <section id="crest">
+<div class="title-card"><div class="tc-in">
 <p class="eyebrow">The crest</p>
 <h2>Unveiling the Family Crest</h2>
+<span class="tc-orn" aria-hidden="true"><i></i></span>
 <p class="sub">The new crest of the Akwetey family, drawn from the Ga Asrafoi.</p>
+</div></div>
 <div class="unveil" id="unveil">
 <div class="stage"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-24 -17 248 248" class="crestbig" role="img" aria-label="The Akwetey family crest">
 <circle cx="100" cy="107" r="119" fill="#FFFDF7"/><circle cx="100" cy="107" r="116" fill="none" stroke="#1B1B1B" stroke-width="7"/><circle cx="100" cy="107" r="106" fill="none" stroke="#1B1B1B" stroke-width="2.5"/>
@@ -600,9 +622,12 @@ display:flex;align-items:center;justify-content:center;font-family:"Cormorant Ga
 
 
 <section id="directions">
+<div class="title-card"><div class="tc-in">
 <p class="eyebrow">Getting there</p>
 <h2>Directions</h2>
+<span class="tc-orn" aria-hidden="true"><i></i></span>
 <p class="sub">IDEG House sits on Garden Road at the Okine Street junction in East Legon, a short drive west of the A&amp;C Mall.</p>
+</div></div>
 <div class="grid">
 <div class="card"><h3>Address</h3><address class="addr">Institute for Democratic Governance<br>IDEG House, No. 24 Garden Road<br>Junction of Garden Road and Okine Street<br>East Legon, Accra, Ghana</address></div>
 <div class="card"><h3>Landmarks</h3><ul class="lm">
@@ -616,9 +641,12 @@ display:flex;align-items:center;justify-content:center;font-family:"Cormorant Ga
 </div>
 </section>
 <section id="symbols">
+<div class="title-card"><div class="tc-in">
 <p class="eyebrow">Heritage</p>
 <h2>Ga Samai: Symbols of the Ga People</h2>
+<span class="tc-orn" aria-hidden="true"><i></i></span>
 <p class="sub">Like the Adinkra of the Akan, the Ga Samai carry proverbs and values. Eight of them, and the values they carry, are gathered here.</p>
+</div></div>
 <div class="symgrid">
 <div class="symcard"><svg viewBox="20 10 160 190" class="sym" role="img" aria-label="Asrafoi symbol">
 
