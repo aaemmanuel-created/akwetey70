@@ -67,18 +67,28 @@ header .crest{width:64px;height:auto;display:block;margin:0 auto 2px}
 .cel-detail a{display:block;font-weight:500;font-size:16px;letter-spacing:.06em;color:var(--ink);text-decoration:none;padding:2px 0}
 .cel-dress{margin:28px auto 0;text-align:center;font-size:15px;color:var(--ink)}
 .cel-dress span{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dk);margin-right:12px}
-.ros{max-width:760px;margin:0 auto;background:#fff;border:1px solid rgba(176,141,60,.55);border-radius:12px;padding:30px 34px;box-shadow:0 10px 30px rgba(122,95,34,.10)}
-.ros h3{margin:0 0 6px;font-size:12.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dk);text-align:center}
-.ros .where{margin:0 0 20px;text-align:center;font-size:14px;color:var(--muted)}
-.ros .where::after{content:"";display:block;width:32px;height:1px;background:var(--gold);margin:14px auto 0}
-.ros ol{list-style:none;margin:0;padding:0;counter-reset:st}
-.ros li{position:relative;padding:0 0 18px 52px;counter-increment:st}
-.ros li::before{content:counter(st);position:absolute;left:0;top:-2px;width:32px;height:32px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",Georgia,serif;font-size:18px;font-weight:600;color:var(--gold-dk);background:#FFFDF7}
-.ros li:not(:last-child)::after{content:"";position:absolute;left:16px;top:32px;bottom:0;width:1px;background:rgba(176,141,60,.45)}
-.ros li b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:21px;font-weight:600;color:var(--ink);line-height:1.2}
-.ros li span{display:block;font-size:14.5px;line-height:1.5;color:var(--muted);margin-top:2px}
-.ros .gap{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:6px 0 26px}
-@media (max-width:620px){.ros{padding:24px 18px}}
+#programme{isolation:isolate}
+#programme .rays{position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1;pointer-events:none;background:repeating-linear-gradient(118deg,rgba(255,255,255,0) 0 70px,rgba(255,250,232,.55) 70px 82px,rgba(255,255,255,0) 82px 150px,rgba(214,174,92,.18) 150px 156px,rgba(255,255,255,0) 156px 230px);filter:blur(6px)}
+#programme .panel{max-width:780px;margin:0 auto;color:var(--ink);border-radius:18px}
+#programme .panel .lg-content{padding:18px}
+#programme .inv-in{align-items:stretch;padding:30px 40px 26px}
+.ros-part{text-align:center}
+.ros-part h3{margin:0;font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-size:17px;letter-spacing:.16em;text-transform:uppercase;color:#7A5F22}
+.ros-part .when{margin:6px 0 2px;font-family:"Cormorant Garamond",Georgia,serif;font-size:24px;font-weight:600;letter-spacing:.04em;color:var(--ink);font-variant-numeric:lining-nums}
+.ros-part .where{margin:0;font-size:13px;color:#3A3A36}
+.ros-div{display:flex;align-items:center;gap:14px;margin:20px 0 18px}
+.ros-div::before,.ros-div::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,#B08D3C,transparent)}
+.ros-div span{width:7px;height:7px;transform:rotate(45deg);border:1px solid #B08D3C}
+.ros ol{list-style:none;margin:20px auto 0;padding:0;max-width:540px;text-align:left}
+.ros li{display:grid;grid-template-columns:78px 22px 1fr;column-gap:12px;position:relative;padding-bottom:16px}
+.ros li time{text-align:right;font-family:"Cormorant Garamond",Georgia,serif;font-size:18px;font-weight:600;color:#8C6B24;font-variant-numeric:lining-nums;line-height:1.3}
+.ros li i{position:relative;display:block}
+.ros li i::before{content:"";position:absolute;left:6px;top:7px;width:9px;height:9px;transform:rotate(45deg);background:#FFFDF7;border:1px solid #B08D3C}
+.ros li:not(:last-child) i::after{content:"";position:absolute;left:10.5px;top:20px;bottom:-16px;width:1px;background:rgba(176,141,60,.5)}
+.ros li b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:20px;font-weight:600;line-height:1.25;color:var(--ink)}
+.ros li span{display:block;font-size:12.5px;line-height:1.5;color:#3A3A36;margin-top:2px}
+.ros-note{margin:6px 0 0;text-align:center;font-size:11.5px;color:#6A5523;font-style:italic}
+@media (max-width:620px){#programme .inv-in{padding:24px 16px 20px}.ros li{grid-template-columns:62px 20px 1fr;column-gap:8px}}
 .verse{max-width:680px;margin:0 auto 32px;text-align:center;font-family:"Cormorant Garamond",Georgia,serif;font-size:24px;font-style:italic;line-height:1.4}
 .verse cite{display:block;margin-top:8px;font-style:normal;font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dk)}
 .prose{max-width:720px;margin:0 auto 32px;color:var(--muted);text-align:center}
@@ -180,23 +190,24 @@ footer{text-align:center;padding:40px 20px 56px;background:linear-gradient(180de
 
 <main>
 <section id="programme">
+<span class="rays" aria-hidden="true"></span>
 <h2>Order of the Day</h2>
-<p class="sub">How the celebration will unfold, from thanksgiving in the afternoon to the evening reception.</p>
-<div class="ros">
-<h3>Thanksgiving Service</h3>
-<p class="where">2:00pm · Christ Church (Anglican), University of Ghana, Legon</p>
-<div style="height:22px"></div>
-<h3>Evening Reception</h3>
-<p class="where">IDEG House, No. 24 Garden Road, East Legon</p>
+<p class="sub">From thanksgiving in the afternoon to the evening reception.</p>
+<div class="panel glass"><span class="lg-bend" aria-hidden="true"></span><span class="lg-tint" aria-hidden="true"></span><span class="lg-shine" aria-hidden="true"></span>
+<div class="lg-content"><div class="inv"><div class="inv-in ros">
+<div class="ros-part"><h3>Thanksgiving Service</h3><p class="when">2:00pm – 3:30pm</p><p class="where">Christ Church (Anglican), University of Ghana, Legon</p></div>
+<div class="ros-div"><span></span></div>
+<div class="ros-part"><h3>Evening Reception</h3><p class="when">4:15pm – 10:00pm</p><p class="where">IDEG House, No. 24 Garden Road, East Legon, Accra</p></div>
 <ol>
-<li><b>Arrival and welcome drinks</b><span>Guests are welcomed with drinks and music.</span></li>
-<li><b>Into the auditorium</b><span>Guests are invited into the auditorium for the evening programme.</span></li>
-<li><b>Speeches and tributes</b><span>Words of thanksgiving and tribute to Dr Akwetey.</span></li>
-<li><b>Unveiling of the Akwetey Family Crest</b><span>The new family crest, built on the Ga Asrafoi symbol, is revealed.</span></li>
-<li><b>IDEG: Moving Forward</b><span>A reveal of the next chapter for IDEG.</span></li>
-<li><b>Dinner</b><span>Guests take their seats for dinner.</span></li>
-<li><b>Dance and music</b><span>The celebration continues on the dance floor.</span></li>
+<li><time>4:15pm</time><i aria-hidden="true"></i><div><b>Arrival and welcome drinks</b><span>Guests are welcomed with drinks and music.</span></div></li>
+<li><time>5:15pm</time><i aria-hidden="true"></i><div><b>Into the auditorium</b><span>Guests are invited into the auditorium for the evening programme.</span></div></li>
+<li><time>5:40pm</time><i aria-hidden="true"></i><div><b>Speeches and tributes</b><span>Words of thanksgiving and tribute to Dr Akwetey.</span></div></li>
+<li><time>6:10pm</time><i aria-hidden="true"></i><div><b>Unveiling of the Akwetey Family Crest</b><span>The new family crest, built on the Ga Asrafoi symbol, is revealed.</span></div></li>
+<li><time>6:20pm</time><i aria-hidden="true"></i><div><b>IDEG: Moving Forward</b><span>A reveal of the next chapter for IDEG.</span></div></li>
+<li><time>6:45pm</time><i aria-hidden="true"></i><div><b>Dinner</b><span>Guests take their seats for dinner.</span></div></li>
+<li><time>8:15pm</time><i aria-hidden="true"></i><div><b>Dance and music</b><span>The celebration continues on the dance floor.</span></div></li>
 </ol>
+</div></div></div>
 </div>
 </section>
 
