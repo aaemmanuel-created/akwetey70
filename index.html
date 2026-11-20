@@ -4,9 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dr Emmanuel O. Akwetey at 70</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Pinyon+Script&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="theme-color" content="#FBF8F1">
 <style>
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:swap;src:url(assets/fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2")}
+@font-face{font-family:"Pinyon Script";font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/pinyon-script-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/inter-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/inter-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/inter-latin-600-normal.woff2) format("woff2")}
 :root{--green:#1E3A2B;--gold:#B08D3C;--gold-dk:#7A5F22;--ivory:#FBF8F1;--ink:#1B1B1B;--muted:#4A4A44;--line:#E3DAC6}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -145,11 +155,57 @@ button:hover{background:#2C5240}button.alt:hover{background:#F1EBDC}
 .addr{font-style:normal}.lm{margin:0;padding-left:18px;color:var(--muted)}.lm li{margin:0 0 8px}.lm b{color:var(--ink);font-weight:600}
 footer{text-align:center;padding:40px 20px 56px;background:linear-gradient(180deg,#FFFFFF,#F5E6C1);color:var(--muted);font-size:14px}
 @media (max-width:560px){header{padding:40px 16px 48px}section{padding:48px 0}}
+
+/* ---- modern refresh ---- */
+.btn{display:inline-block;background:var(--ink);color:#FFFDF7!important;text-decoration:none;border-radius:999px;padding:11px 22px;font-size:14px;font-weight:500}.btn:hover{background:#3A3428}
+#directions .grid{align-items:start}
+:root{--ink:#17150F;--muted:#5B574C;--line:#ECE3CF;--radius:20px}
+body{font-feature-settings:"ss01","cv11";-webkit-font-smoothing:antialiased;letter-spacing:-.003em}
+a{color:var(--gold-dk)}a:hover{color:var(--ink)}
+nav{background:transparent;border:0;backdrop-filter:none;padding:12px 12px 0;pointer-events:none}
+nav .in{pointer-events:auto;max-width:max-content;margin:0 auto;padding:6px;gap:2px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;border-radius:999px;background:rgba(255,253,247,.72);-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(176,141,60,.28);box-shadow:0 8px 24px rgba(90,70,20,.08)}
+nav .in::-webkit-scrollbar{display:none}
+nav a{flex:none;color:var(--ink);font-size:12.5px;font-weight:500;letter-spacing:.04em;text-transform:none;padding:8px 14px;border-radius:999px;transition:background .2s,color .2s}
+nav a:hover{background:rgba(176,141,60,.12);color:var(--ink)}
+nav a.cta{background:var(--ink);color:#FFFDF7}nav a.cta:hover{background:#3A3428;color:#fff}
+@media (max-width:720px){nav .in{max-width:100%;justify-content:flex-start}}
+section{padding:104px 0}
+section::before{background:linear-gradient(180deg,#FAF1DC 0%,#FDF9EF 40%,#FFFFFF 100%)}
+section:nth-of-type(even)::before{background:linear-gradient(180deg,#FFFFFF 0%,#FDF9EF 60%,#FAF1DC 100%)}
+.eyebrow{margin:0 0 14px;text-align:center;font-size:11.5px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-dk)}
+.eyebrow::before,.eyebrow::after{content:"";display:inline-block;width:28px;height:1px;background:var(--gold);vertical-align:middle;margin:0 14px;opacity:.7}
+h2{color:var(--ink);font-weight:500;font-size:clamp(36px,5.2vw,56px);line-height:1.05;letter-spacing:-.01em;margin:0 0 14px}
+.sub{font-size:16.5px;max-width:560px;margin:0 auto 48px;color:var(--muted)}
+.card,.symcard,.menu,.cel-card{border-radius:var(--radius);border:1px solid rgba(176,141,60,.32);box-shadow:0 1px 2px rgba(60,45,10,.04),0 18px 40px -18px rgba(90,70,20,.18)}
+.card{padding:30px 28px}
+.card h3,.symcard h3{color:var(--ink);font-weight:600}
+.card h3{font-size:26px;margin-bottom:10px}
+.grid{gap:24px}
+.symgrid{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}
+.symcard{padding:34px 24px 30px}
+.verse{font-size:clamp(24px,3vw,30px);line-height:1.35;color:var(--ink)}
+.menu{padding:56px clamp(22px,7vw,80px)}
+.menu li{font-size:23px}
+.viewer{border-radius:var(--radius);border:1px solid rgba(176,141,60,.32)}
+button{background:var(--ink);color:#FFFDF7;border-radius:999px;padding:12px 24px;font-size:14.5px;letter-spacing:.02em;transition:background .2s,transform .2s}
+button:hover{background:#3A3428}button.alt{background:transparent;color:var(--ink);border:1px solid rgba(23,21,15,.35)}button.alt:hover{background:rgba(176,141,60,.10)}
+.goldline{opacity:.6}
+footer{background:linear-gradient(180deg,#FFFFFF,#FAF1DC);padding:56px 20px 72px;letter-spacing:.02em}
+.ros-foot{margin-top:10px;padding-top:16px;border-top:1px solid #B08D3C;text-align:center;font-size:12.5px;line-height:1.9;color:#3A3A36}
+.ros-foot a{color:var(--ink);text-decoration:none;white-space:nowrap}
+.ros-foot .bar{display:inline-block;width:1px;height:11px;background:#B08D3C;margin:0 10px;vertical-align:-1px}
+.ros-foot .lbl{font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:11px;color:var(--gold-dk);margin-right:12px}
+#rsvp{scroll-margin-top:90px}section{scroll-margin-top:40px}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+@media (max-width:560px){section{padding:72px 0}.eyebrow::before,.eyebrow::after{width:16px;margin:0 10px}}
 </style>
+<script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
 <nav aria-label="Sections"><div class="in">
-<a href="#programme">Programme</a><a href="#theme">Theme</a><a href="#details">Details</a><a href="#symbols">Ga Symbols</a><a href="#crest">Our Crest</a><a href="#menu">Menu</a><a href="#venue">3D venue</a><a href="#directions">Directions</a><a href="#rsvp">R.S.V.P.</a>
+<a href="#programme">Programme</a><a href="#theme">Theme</a><a href="#symbols">Ga Symbols</a><a href="#crest">Our Crest</a><a href="#menu">Menu</a><a href="#venue">Venue</a><a href="#directions">Directions</a><a href="#rsvp" class="cta">R.S.V.P.</a>
 </div></nav>
 
 <header>
@@ -191,6 +247,7 @@ footer{text-align:center;padding:40px 20px 56px;background:linear-gradient(180de
 <main>
 <section id="programme">
 <span class="rays" aria-hidden="true"></span>
+<p class="eyebrow">05 · 12 · 2026</p>
 <h2>Order of the Day</h2>
 <p class="sub">From thanksgiving in the afternoon to the evening reception.</p>
 <div class="panel glass"><span class="lg-bend" aria-hidden="true"></span><span class="lg-tint" aria-hidden="true"></span><span class="lg-shine" aria-hidden="true"></span>
@@ -207,11 +264,13 @@ footer{text-align:center;padding:40px 20px 56px;background:linear-gradient(180de
 <li><time>6:45pm</time><i aria-hidden="true"></i><div><b>Dinner</b><span>Guests take their seats for dinner.</span></div></li>
 <li><time>8:15pm</time><i aria-hidden="true"></i><div><b>Dance and music</b><span>The celebration continues on the dance floor.</span></div></li>
 </ol>
+<div class="ros-foot" id="rsvp"><span class="lbl">R.S.V.P.</span><a href="tel:+233242934830">024 293 4830</a><span class="bar"></span><a href="tel:+233544357751">054 435 7751</a><br><span class="lbl">Dress</span>All White or Traditional</div>
 </div></div></div>
 </div>
 </section>
 
 <section id="theme">
+<p class="eyebrow">Our theme</p>
 <h2>The Glory of the Lord’s House</h2>
 <p class="sub">Our theme for the celebration</p>
 <blockquote class="verse">“The glory of this latter house shall be greater than of the former, saith the LORD of hosts: and in this place will I give peace.”<cite>Haggai 2:9</cite></blockquote>
@@ -224,31 +283,10 @@ footer{text-align:center;padding:40px 20px 56px;background:linear-gradient(180de
 </div>
 </section>
 
-<section id="details">
-<h2>The Celebration</h2>
-<p class="sub">An afternoon of thanksgiving and fellowship in honour of a life of scholarship and service.</p>
-<p class="cel-date">Saturday, 5th December 2026</p>
-<div class="cel-grid">
-<div class="cel-card">
-<p class="cel-label">Thanksgiving Service</p>
-<p class="cel-key">2:00pm – 3:30pm</p>
-<p class="cel-detail"><b>Christ Church (Anglican)</b>University of Ghana, Legon</p>
-</div>
-<div class="cel-card">
-<p class="cel-label">Reception</p>
-<p class="cel-key">Follows the service</p>
-<p class="cel-detail"><b>IDEG House</b>No. 24 Garden Road, East Legon, Accra</p>
-</div>
-<div class="cel-card" id="rsvp">
-<p class="cel-label">R.S.V.P.</p>
-<p class="cel-detail"><a href="tel:+233242934830">024 293 4830</a><a href="tel:+233544357751">054 435 7751</a></p>
-</div>
-</div>
-<p class="cel-dress"><span>Dress</span>All White or Traditional</p>
-</section>
 
 
 <section id="symbols">
+<p class="eyebrow">Heritage</p>
 <h2>Ga Samai: Symbols of the Ga People</h2>
 <p class="sub">Like the Adinkra of the Akan, the Ga Samai carry proverbs and values. Eight of them, and the values they carry, are gathered here.</p>
 <div class="symgrid">
@@ -320,6 +358,7 @@ footer{text-align:center;padding:40px 20px 56px;background:linear-gradient(180de
 </section>
 
 <section id="crest">
+<p class="eyebrow">The crest</p>
 <h2>Unveiling the Family Crest</h2>
 <p class="sub">The new crest of the Akwetey family, drawn from the Ga Asrafoi.</p>
 <div class="unveil" id="unveil">
@@ -352,6 +391,7 @@ footer{text-align:center;padding:40px 20px 56px;background:linear-gradient(180de
 </section>
 
 <section id="menu">
+<p class="eyebrow">Dinner</p>
 <h2>Menu</h2>
 <p class="sub">Served at the reception at IDEG House.</p>
 <div class="menu">
@@ -381,7 +421,8 @@ footer{text-align:center;padding:40px 20px 56px;background:linear-gradient(180de
 </section>
 
 <section id="venue">
-<h2>The Venue in 3D</h2>
+<p class="eyebrow">The venue</p>
+<h2>IDEG House in 3D</h2>
 <p class="sub">Drag to turn the view, pinch or scroll to zoom. Modelled from published photographs of IDEG House: the three-storey façade with its arched tower window and balconies, the gated wall and the palm-lined boundary on Garden Road.</p>
 <div class="viewer" id="viewer" role="img" aria-label="Interactive 3D illustration of IDEG House and its garden, set up for the celebration">
 <span class="badge">Modelled from photographs &middot; not to scale</span>
@@ -394,6 +435,7 @@ footer{text-align:center;padding:40px 20px 56px;background:linear-gradient(180de
 </section>
 
 <section id="directions">
+<p class="eyebrow">Getting there</p>
 <h2>Directions</h2>
 <p class="sub">IDEG House sits on Garden Road at the Okine Street junction in East Legon, a short drive west of the A&amp;C Mall.</p>
 <div class="grid">
@@ -405,8 +447,7 @@ footer{text-align:center;padding:40px 20px 56px;background:linear-gradient(180de
 <li><b>CafeClair</b> and <b>369 Gym &amp; Wellness Centre</b> &middot; a short walk north-east along Garden Road.</li>
 <li>Look for the long cream boundary wall lined with fan palms.</li>
 </ul></div>
-<div class="card"><h3>Map</h3><p>Open the location in Google Maps for live directions from wherever you are.</p><p style="margin-top:12px"><a href="https://www.google.com/maps/search/?api=1&amp;query=Institute+For+Democratic+Governance+24+Garden+Rd+East+Legon+Accra">Open in Google Maps</a></p></div>
-<div class="card"><h3>Parking</h3><p><span class="ph">[PARKING ARRANGEMENTS]</span></p></div>
+<div class="card"><h3>Map</h3><p>Open the location in Google Maps for live directions from wherever you are.</p><p style="margin-top:18px"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Institute+For+Democratic+Governance+24+Garden+Rd+East+Legon+Accra" target="_blank" rel="noopener noreferrer">Open in Google Maps</a></p></div>
 </div>
 </section>
 
@@ -415,8 +456,8 @@ footer{text-align:center;padding:40px 20px 56px;background:linear-gradient(180de
 
 <footer>With gratitude, Dr Emmanuel O. Akwetey</footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="assets/js/three.min.js"></script>
+<script src="assets/js/OrbitControls.js"></script>
 <script>
 (function(){
   var host=document.getElementById('viewer');
@@ -530,6 +571,12 @@ footer{text-align:center;padding:40px 20px 56px;background:linear-gradient(180de
 <script>
 (function(){var u=document.getElementById('unveil'),b=document.getElementById('unveilBtn');if(!u||!b)return;
 b.addEventListener('click',function(){var on=u.classList.toggle('unveiled');b.textContent=on?'Cover the crest again':'Unveil the crest';});})();
+</script>
+<script>
+(function(){var els=document.querySelectorAll('main section > *:not(.rays)');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+els.forEach(function(e){e.classList.add('rv');io.observe(e)})})();
 </script>
 </body>
 </html>
