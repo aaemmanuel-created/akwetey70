@@ -457,6 +457,17 @@ header .inv .req{font-size:13.5px!important;line-height:1.5;color:#2A2A2A}
 .crest-part{margin-top:72px;scroll-margin-top:70px}
 @media (max-width:600px){.crest-part{margin-top:52px}}
 @media (max-width:600px){nav a{font-size:11.5px!important;padding:7px 6px!important;letter-spacing:0!important}}@media (max-width:375px){nav a{font-size:10.5px!important;padding:6px 5px!important}nav .bar{max-width:calc(100vw - 12px)!important}}
+/* landscape invitation (A5 proportions) on tablets and computers */
+@media (min-width:700px){
+header .panel{max-width:880px!important;width:100%}
+header .inv{aspect-ratio:794/559;display:flex}
+header .inv-in{flex:1;justify-content:center;gap:8px;padding:18px 48px 14px}
+header .inv h1{font-size:clamp(28px,3.4vw,36px)}
+header .inv .bday-row{margin-top:0}
+header .inv .cols{margin-top:6px}
+header .inv .foot{margin-top:8px}
+}
+@media (min-width:1000px){header .inv-in{gap:12px}header .inv .cols{margin-top:10px}header .inv .foot{margin-top:12px}}
 </style>
 <script>document.documentElement.classList.add("js");if(window.top!==window.self&&/\.github\.io$/.test(location.hostname)){document.documentElement.style.display="none"}</script>
 </head>
